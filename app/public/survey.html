@@ -11,102 +11,109 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./reset.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./client.js"></script>
 </head>
+
 <body>
-    
-    <h2>Survey Questions:</h2>
+
+    <h2>Survey</h2>
+    <hr>
     <form action="">
+        <h3>Name: </h3>
+        <input type="text" name="" id="name">
+        <h3>Attach a photo by copy pasting picture URL.</h3>
+        <input type="text" name="" id="photo">
         <h3>You prefer single quote over double quotes.</h3>
         <select name="" id="q1">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <h3>You enjoy HTML over CSS</h3>
-    <select name="" id="q2">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <h3>You prefer Front-end over Back-end</h3>
-    <select name="" id="q3">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <h3>You study best first thing in the morning rather than afternoon.</h3>
-    <select name="" id="q4">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <h3>You chose programming because you enjoy frustration</h3>
-    <select name="" id="q5">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <h3>When you've spent an hour trying to solve a problem, you need a break.</h3>
-    <select name="" id="q6">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <h3>You find programming humor funnier than most people.</h3>
-    <select name="" id="q7">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <h3>You look down on people who aren't in a STEM field.</h3>
-    <select name="" id="q8">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <h3>Your code is always clean.</h3>
-    <select name="" id="q9">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <h3>You commit early and often.</h3>
-    <select name="" id="q10">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <input type="submit">
-    
-</form>
+            <option data-value=""></option>
+            <option data-value="1">1 (Strongly Disagree)</option>
+            <option data-value="2">2</option>
+            <option data-value="3">3</option>
+            <option data-value="4">4</option>
+            <option data-value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>You enjoy HTML over CSS</h3>
+        <select name="" id="q2">
+            <option data-value=""></option>
+            <option data-value="1">1 (Strongly Disagree)</option>
+            <option data-value="2">2</option>
+            <option data-value="3">3</option>
+            <option data-value="4">4</option>
+            <option data-value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>You prefer Front-end over Back-end</h3>
+        <select name="" id="q3">
+            <option data-value=""></option>
+            <option data-value="1">1 (Strongly Disagree)</option>
+            <option data-value="2">2</option>
+            <option data-value="3">3</option>
+            <option data-value="4">4</option>
+            <option data-value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>You study best first thing in the morning rather than afternoon.</h3>
+        <select name="" id="q4">
+            <option data-value=""></option>
+            <option data-value="1">1 (Strongly Disagree)</option>
+            <option data-value="2">2</option>
+            <option data-value="3">3</option>
+            <option data-value="4">4</option>
+            <option data-value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>You chose programming because you enjoy frustration</h3>
+        <select name="" id="q5">
+            <option data-value=""></option>
+            <option data-value="1">1 (Strongly Disagree)</option>
+            <option data-value="2">2</option>
+            <option data-value="3">3</option>
+            <option data-value="4">4</option>
+            <option data-value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>When you've spent an hour trying to solve a problem, you need a break.</h3>
+        <select name="" id="q6">
+            <option data-value=""></option>
+            <option data-value="1">1 (Strongly Disagree)</option>
+            <option data-value="2">2</option>
+            <option data-value="3">3</option>
+            <option data-value="4">4</option>
+            <option data-value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>You find programming humor funnier than most people.</h3>
+        <select name="" id="q7">
+            <option data-value=""></option>
+            <option data-value="1">1 (Strongly Disagree)</option>
+            <option data-value="2">2</option>
+            <option data-value="3">3</option>
+            <option data-value="4">4</option>
+            <option data-value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>You look down on people who aren't in a STEM field.</h3>
+        <select name="" id="q8">
+            <option data-value=""></option>
+            <option data-value="1">1 (Strongly Disagree)</option>
+            <option data-value="2">2</option>
+            <option data-value="3">3</option>
+            <option data-value="4">4</option>
+            <option data-value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>Your code is always clean.</h3>
+        <select name="" id="q9">
+            <option data-value=""></option>
+            <option data-value="1">1 (Strongly Disagree)</option>
+            <option data-value="2">2</option>
+            <option data-value="3">3</option>
+            <option data-value="4">4</option>
+            <option data-value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>You commit early and often.</h3>
+        <select name="" id="q10">
+            <option data-value=""></option>
+            <option data-value="1">1 (Strongly Disagree)</option>
+            <option data-value="2">2</option>
+            <option data-value="3">3</option>
+            <option data-value="4">4</option>
+            <option data-value="5">5 (Strongly Agree)</option>
+        </select>
+        <button type="submit" id="submit">Submit</button>
+
+    </form>
 </body>
