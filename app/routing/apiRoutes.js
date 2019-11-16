@@ -13,56 +13,42 @@ module.exports = function (app) {
         // console.log(req.body);
         // res.json({name: "michael"});
         let newFriend = req.body;
-        console.log("about to add a new friend to array")
-        console.log(`newFriend:`, newFriend);
-        console.log(friends.length);
         // game logic goes here
-        // first find the friends array and compare their answer
-        // array to yours. Take absolute value of difference and
-        // then compare them
 
-        // answer array
-
-        let matchDiff = [];
+        // initialize bestMatch with first friend in friends array
+        // then update it with different friend when for loop executes,
+        // but only if other friends have less difference in scores
+        let bestMatch = friends[0];
+        // let arrOfSumOfAnswerDiff = [];
+        let bestMatchDiff = Infinity;
+        // for each friend in my friends array (i refers to friend index),
+        // console.log(`friends.length: ${friends.length}`);
         for (let i = 0; i < friends.length; i++) {
-            for (let j = 0; j < 10; j++) {
-                // if current answer index of new friend does not 
-                // equal current answer index of a friend at some
-                // index within friends array of objcets, then
-                // take the absolute value of the difference of 
-                // newFriend score and friend[i] score
-
-                // if (parseInt(newFriend.scores[j]) !== parseInt(friends[i].scores[j])) 
-                console.log('is there an error yet?')
-                console.log(`newFriend.scores[j]: ${parseInt(newFriend.answers[j])}`);
-                console.log(`friends[i].scores[j]: ${parseInt(friends[i].scores[j])}`);
-                let personDiff = Math.abs(parseInt(newFriend.answers[j]) - parseInt(friends[i].scores[j]));
-                console.log('how about now?')
-                matchDiff.push(personDiff);
-                console.log('now?')
+            // loop through that friend's scores and compare them to 
+            // newFriend's scores (j refers to answer index)
+            let sumOfDiffPerPerson = 0;
+            // each index in this array corresponds to the sum of differences in 
+            // compatibility points between newFriend and friend at
+            // current index
+            console.log(`newFriend.scores.length: `, newFriend.scores.length);
+            console.log("iteration: " + i);
+            console.log(`friends[i].scores.length`, friends[i].scores.length);
+            for (let j = 0; j < newFriend.scores.length; j++) {
+                // console.log(`newFriend.scores[j]: `, newFriend.scores[j]);
+                let scoreDiffPerAnswer = Math.abs(parseInt(newFriend.scores[j]) - parseInt(friends[i].scores[j]));
+                sumOfDiffPerPerson += scoreDiffPerAnswer;
+                console.log(typeof(sumOfDiffPerPerson));
             }
-        }
-        console.log('and now?')
-
-        console.log(matchDiff);
-        console.log("orrrr")
-        let index = 0;
-        let smallestVal = matchDiff[0];
-        for (let k = 0; k < matchDiff.length; k++) {
-            if (matchDiff[k] < smallestVal) {
-                smallestVal = matchDiff[k];
-                index = k;
+            if (sumOfDiffPerPerson < bestMatchDiff) {
+                // console.log(`bestMatch = `, friends[i]);
+                bestMatchDiff = sumOfDiffPerPerson;
+                bestMatch = friends[i];
             };
         }
-        console.log(`matchDiff array: ${matchDiff}`);
-        console.log(`closest match is person at index ${index}`);
+        // console.log("Your best match is: ", bestMatch);
+        
+        res.json(bestMatch);
         friends.push(newFriend);
-        console.log("new friend added");
-        console.log(friends.length);
-
-        // change this to: return the
-        // closest friend (best match)
-        res.json(newFriend);
     });
 };
 // get requests on server side is "sort of like"
