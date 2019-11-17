@@ -24,7 +24,152 @@
 
 <body>
 
-    <h2>Survey</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col mt-5">
+                <div class="jumbotron">
+                    <h1 class="display-4 text-center">Find your coding friend here!</h1>
+                    <br>
+                    <br>
+                    <div id="main">
+                        <div id="timer" class="text-left">
+                            <p class="lead">Answer the survey questions to see who you're most compatible with!
+                            </p>
+                            <hr class="my-4">
+                            <form action="">
+                                <h3>Name: </h3>
+                                <input type="text" name="" id="name">
+                                <h3>Attach a photo by copy pasting picture URL.</h3>
+                                <input type="text" name="" id="photo">
+                                <h3>You prefer single quote over double quotes.</h3>
+                                <select name="" id="q1">
+                                    <option data-value=""></option>
+                                    <option data-value="1">1 (Strongly Disagree)</option>
+                                    <option data-value="2">2</option>
+                                    <option data-value="3">3</option>
+                                    <option data-value="4">4</option>
+                                    <option data-value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>You enjoy HTML over CSS</h3>
+                                <select name="" id="q2">
+                                    <option data-value=""></option>
+                                    <option data-value="1">1 (Strongly Disagree)</option>
+                                    <option data-value="2">2</option>
+                                    <option data-value="3">3</option>
+                                    <option data-value="4">4</option>
+                                    <option data-value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>You prefer Front-end over Back-end</h3>
+                                <select name="" id="q3">
+                                    <option data-value=""></option>
+                                    <option data-value="1">1 (Strongly Disagree)</option>
+                                    <option data-value="2">2</option>
+                                    <option data-value="3">3</option>
+                                    <option data-value="4">4</option>
+                                    <option data-value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>You study best first thing in the morning rather than afternoon.</h3>
+                                <select name="" id="q4">
+                                    <option data-value=""></option>
+                                    <option data-value="1">1 (Strongly Disagree)</option>
+                                    <option data-value="2">2</option>
+                                    <option data-value="3">3</option>
+                                    <option data-value="4">4</option>
+                                    <option data-value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>You chose programming because you enjoy frustration</h3>
+                                <select name="" id="q5">
+                                    <option data-value=""></option>
+                                    <option data-value="1">1 (Strongly Disagree)</option>
+                                    <option data-value="2">2</option>
+                                    <option data-value="3">3</option>
+                                    <option data-value="4">4</option>
+                                    <option data-value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>When you've spent an hour trying to solve a problem, you need a break.</h3>
+                                <select name="" id="q6">
+                                    <option data-value=""></option>
+                                    <option data-value="1">1 (Strongly Disagree)</option>
+                                    <option data-value="2">2</option>
+                                    <option data-value="3">3</option>
+                                    <option data-value="4">4</option>
+                                    <option data-value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>You find programming humor funnier than most people.</h3>
+                                <select name="" id="q7">
+                                    <option data-value=""></option>
+                                    <option data-value="1">1 (Strongly Disagree)</option>
+                                    <option data-value="2">2</option>
+                                    <option data-value="3">3</option>
+                                    <option data-value="4">4</option>
+                                    <option data-value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>You look down on people who aren't in a STEM field.</h3>
+                                <select name="" id="q8">
+                                    <option data-value=""></option>
+                                    <option data-value="1">1 (Strongly Disagree)</option>
+                                    <option data-value="2">2</option>
+                                    <option data-value="3">3</option>
+                                    <option data-value="4">4</option>
+                                    <option data-value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>Your code is always clean.</h3>
+                                <select name="" id="q9">
+                                    <option data-value=""></option>
+                                    <option data-value="1">1 (Strongly Disagree)</option>
+                                    <option data-value="2">2</option>
+                                    <option data-value="3">3</option>
+                                    <option data-value="4">4</option>
+                                    <option data-value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>You commit early and often.</h3>
+                                <select name="" id="q10">
+                                    <option data-value=""></option>
+                                    <option data-value="1">1 (Strongly Disagree)</option>
+                                    <option data-value="2">2</option>
+                                    <option data-value="3">3</option>
+                                    <option data-value="4">4</option>
+                                    <option data-value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <button type="submit" id="submit" class="btn btn-primary btn-lg btn-block mt-2">Find your best match NOW</button>
+
+                            </form>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="myModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Your best match is : </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Match Name: </h4>
+                        <p id="matchName"></p>
+                        <img id="profilePic" src="" alt="Profile Picture">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- <h2>Survey</h2>
     <hr>
     <form action="">
         <h3>Name: </h3>
@@ -144,5 +289,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </body>
