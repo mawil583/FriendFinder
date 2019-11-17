@@ -21,7 +21,7 @@ $(document).ready(function () {
                 $('#myModal').modal('show');
             });
         $("#name").val("");
-        $("#photo").val('');
+        $("#photo").val("");
         $('select').val("");
     });
 });
